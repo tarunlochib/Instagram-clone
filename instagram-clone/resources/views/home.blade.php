@@ -19,9 +19,9 @@
                 <div style="padding-right: 25px"><strong>1</strong> following</div>
             </div>
 
-            <div class="pt-4 font-weight-bold">Kung Fu Panda</div>
-            <div>A cute but dangerous kungfu fighter from shaolin,China </div>
-            <div><a href="#">www.kungfupanda.com</a></div>
+            <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
+            <div>{{ $user->profile->description }}</div>
+            <div><a href="#">{{ $user->profile->url }}</a></div>
 
         </div>
     </div>
