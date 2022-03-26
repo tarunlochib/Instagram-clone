@@ -11,7 +11,7 @@
 
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a href="#">Add New Post</a>
+                <a href="/p/create">Add New Post</a>
             </div>
 
             <div class="d-flex">
@@ -28,17 +28,11 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img src="/images/pao.jpg" class="w-100">
-        </div>
-
-        <div class="col-4">
-            <img src="/images/pao2.jpg" class="w-100">
-        </div>
-
-        <div class="col-4">
-            <img src="/images/pao3.jpg" class="w-100">
-        </div>
+        @foreach($user->posts as $post)
+            <div class="col-4">
+                <img src="/storage/{{ $post->image }}" class="w-100">
+            </div>
+        @endforeach
     </div>
 
 </div>
