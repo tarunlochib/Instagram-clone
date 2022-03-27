@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     
-    @csrf
     <form action="/p" enctype="multipart/form-data" method="POST">
         @csrf
 
