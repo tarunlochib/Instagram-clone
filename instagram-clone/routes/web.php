@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\FollowsController;
+// use App\Http\Controllers\PostsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +17,15 @@ use App\Http\Controllers\FollowsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
 
 Route::post('follow/{user}', 'FollowsController@store');
+
+
+Route::get('/', [App\Http\Controllers\PostsController::class, 'index']);
 
 Route::get('/p/create', [App\Http\Controllers\PostsController::class, 'create']);
 
